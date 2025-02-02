@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="534.0" prefWidth="860.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dam.alumno.filmoteca.PeliculaController">
+   <children>
+      <BorderPane prefHeight="506.0" prefWidth="873.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <ButtonBar prefHeight="58.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button fx:id="botonAceptar" mnemonicParsing="false" onAction="#handlerAceptar" prefHeight="38.0" prefWidth="108.0" styleClass="botonEditAdd" text="Aceptar" />
+                  <Button fx:id="botonCancelar" layoutX="135.0" layoutY="18.0" minWidth="26.0" mnemonicParsing="false" onAction="#handlerCancelar" prefHeight="37.0" styleClass="botonCerrar" text="Cancelar" />
+              </buttons>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </ButtonBar>
+         </bottom>
+         <top>
+            <Label fx:id="textoTitulo" styleClass="tituloespecial" text="TituloAccion" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <left>
+            <AnchorPane prefHeight="395.0" prefWidth="851.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="7.0" prefHeight="370.0" prefWidth="526.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="184.0" AnchorPane.topAnchor="20.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="140.000048828125" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.5999511718749" minWidth="10.0" prefWidth="385.5999511718749" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label styleClass="Titulos" text="Titulo:">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label styleClass="Titulos" text="Año" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label styleClass="Titulos" text="Genero" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label styleClass="Titulos" text="Descripción:" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label styleClass="Titulos" text="Director:" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label styleClass="Titulos" text="Rating:" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label styleClass="Titulos" text="URL:" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="fieldTitle" prefHeight="25.0" prefWidth="213.0" text="titulo" GridPane.columnIndex="1" />
+                        <TextField fx:id="fieldYear" prefHeight="25.0" prefWidth="213.0" text="2025" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="fieldGenre" prefHeight="44.0" prefWidth="218.0" text="[]" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="fieldDescription" prefHeight="14.0" prefWidth="213.0" text="descripcion" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="fieldDirector" prefHeight="25.0" prefWidth="213.0" text="director" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Text fx:id="fieldVRat" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="rating" text="VRat" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Slider fx:id="fieldRating" max="10.0" prefHeight="38.0" prefWidth="279.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="60.0" right="15.0" />
+                           </GridPane.margin>
+                        </Slider>
+                        <TextField fx:id="fieldURLPoster" prefHeight="85.0" prefWidth="346.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <ImageView fx:id="imagePoster" fitHeight="248.0" fitWidth="254.0" layoutX="616.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" smooth="false" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="616.0" AnchorPane.rightAnchor="-19.0" AnchorPane.topAnchor="20.0">
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

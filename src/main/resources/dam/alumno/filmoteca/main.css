@@ -1,0 +1,95 @@
+
+/* Estilo comun para Label */
+Label{
+    -fx-font-size: 16px;
+    -fx-alignment: center;
+    -fx-padding:0 5px 0 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #8b8000;
+    -fx-border-width: 2px;
+}
+
+/* Estilo comun para botones*/
+Button{
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+}
+
+/* Estilo comun para Text */
+Text {
+    -fx-font-size: 16px;
+    -fx-alignment: Left;
+}
+
+/* Estilo comun para TextArea */
+TextArea {
+    -fx-font-size: 16px;
+    -fx-alignment: Left;
+}
+
+/* Estilo comun para TextField */
+TextField{
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+
+/* Estilo para TableView */
+TableView {
+    -fx-font-size: 14px;
+}
+
+/* Estilo para MenuBar */
+.menu-bar {
+    -fx-font-size: 16px;
+    -fx-background-color:lightblue;
+}
+
+/* Estilo para etiqueta que muestra valor del rating */
+.rating {
+    -fx-font-size: 16px;
+    -fx-background-color:lightblue;
+    -fx-font-weight: bold;
+}
+/* Estilo especifico para labels
+ de busqueda y accion añadir/editar */
+.tituloespecial{
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+    -fx-background-color: lightgreen;
+    -fx-font-weight: bold;
+    -fx-padding:0 10px 0 10px;
+}
+
+/* Estilo para columna de titulo del tableview */
+.titulogrid{
+    -fx-font-size: 14px;
+    -fx-background-color: lightgreen;
+}
+
+/* Estilo especifico para labels
+ de campos de una pelicula */
+.Titulos {
+    -fx-text-fill: black;
+    -fx-background-color: cyan;
+}
+
+/* Estilo especifico para botones "Eliminar/Cancelar"*/
+.botonCerrar{
+    -fx-background-color: red;
+}
+/* Estilo especifico para botones "Añadir/Editar/Aceptar"*/
+.botonEditAdd{
+    -fx-background-color: darkblue;
+}
+/* Estilo adicional para los botones
+ cuando el mouse pasa sobre ellos */
+.button:hover {
+    -fx-background-color: grey;}
+
+/* Estilo de aviso para URL no valida */
+.cuadroRojo {
+    -fx-border-width: 2px;
+    -fx-border-color: red;
+}
